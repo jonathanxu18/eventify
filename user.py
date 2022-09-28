@@ -7,10 +7,12 @@ scope = 'user-top-read'
 auth_manager = SpotifyOAuth(scope=scope)
 sp = spotipy.Spotify(auth_manager=auth_manager)
 
-results = sp.current_user_top_artists(limit=50)
+print(auth_manager.get_authorize_url())
+
+""" results = sp.current_user_top_artists(limit=50)
 
 for artist in results['items']:
-    print(artist['name'])
+    print(artist['name']) """
 
 
 
